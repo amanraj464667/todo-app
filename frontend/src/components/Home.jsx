@@ -23,7 +23,7 @@ const Home = () => {
     try {
       
      const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:5000/task", {
+      const res = await fetch("https://todo-app-s8x4.onrender.com/task", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -40,7 +40,7 @@ const Home = () => {
     try {
       
      const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:5000/task", {
+      const res = await fetch("https://todo-app-s8x4.onrender.com/task", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const Home = () => {
     try {
       
       const token = localStorage.getItem("token");
-      await fetch(`http://localhost:5000/task/${id}`, {
+      await fetch(`https://todo-app-s8x4.onrender.com/task/${id}`, {
         method: "PATCH",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -78,7 +78,7 @@ const Home = () => {
     try {
       
       const token = localStorage.getItem("token");
-      await fetch(`http://localhost:5000/task/${id}`, {
+      await fetch(`https://todo-app-s8x4.onrender.com/task/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -95,7 +95,7 @@ const Home = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:5000/task/${editTaskId}`,{
+      const res = await fetch(`https://todo-app-s8x4.onrender.com/task/${editTaskId}`,{
         method:"PUT",
         headers:{
           "Content-Type":"application/json",
